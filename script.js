@@ -59,26 +59,28 @@ window.addEventListener("scroll", updateActiveLink);
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("open");
-  document.body.style.overflow = navLinks.classList.contains("open")
-    ? "hidden"
-    : "";
-});
-
-// Close menu when clicking a link
-navLinks.querySelectorAll(".nav-link").forEach((link) => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("open");
-    document.body.style.overflow = "";
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("open");
+    document.body.style.overflow = navLinks.classList.contains("open")
+      ? "hidden"
+      : "";
   });
-});
+
+  // Close menu when clicking a link
+  navLinks.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("open");
+      document.body.style.overflow = "";
+    });
+  });
+}
 
 // ─── SCROLL REVEAL (Intersection Observer) ───
 const revealElements = document.querySelectorAll(
-  ".about-card, .skill-item, .tool-card, .design-card, .contact-item, .stat-item"
+  ".about-card, .skill-item, .tool-card, .design-card, .project-card, .cert-card, .contact-item, .stat-item"
 );
 
 const revealObserver = new IntersectionObserver(
@@ -149,27 +151,29 @@ counters.forEach((counter) => counterObserver.observe(counter));
 // ─── CONTACT FORM (Demo Handler) ───
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  const submitBtn = document.getElementById("form-submit");
-  const originalHTML = submitBtn.innerHTML;
+    const submitBtn = document.getElementById("form-submit");
+    const originalHTML = submitBtn.innerHTML;
 
-  submitBtn.innerHTML = '<span>Sending...</span><i class="fa-solid fa-spinner fa-spin"></i>';
-  submitBtn.disabled = true;
-
-  setTimeout(() => {
-    submitBtn.innerHTML = '<span>Sent!</span><i class="fa-solid fa-check"></i>';
-    submitBtn.style.background = "linear-gradient(135deg, #10b981, #059669)";
+    submitBtn.innerHTML = '<span>Sending...</span><i class="fa-solid fa-spinner fa-spin"></i>';
+    submitBtn.disabled = true;
 
     setTimeout(() => {
-      submitBtn.innerHTML = originalHTML;
-      submitBtn.style.background = "";
-      submitBtn.disabled = false;
-      contactForm.reset();
-    }, 2500);
-  }, 1500);
-});
+      submitBtn.innerHTML = '<span>Sent!</span><i class="fa-solid fa-check"></i>';
+      submitBtn.style.background = "linear-gradient(135deg, #10b981, #059669)";
+
+      setTimeout(() => {
+        submitBtn.innerHTML = originalHTML;
+        submitBtn.style.background = "";
+        submitBtn.disabled = false;
+        contactForm.reset();
+      }, 2500);
+    }, 1500);
+  });
+}
 
 // ─── SMOOTH PARALLAX ON HERO SHAPES ───
 window.addEventListener("mousemove", (e) => {

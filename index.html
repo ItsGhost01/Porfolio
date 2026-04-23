@@ -15,482 +15,714 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="logo">Monish's Portfolio</div>
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">M<span>onish</span></a>
 
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#Certifications">Certifications</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#designs" class="nav-link">Designs</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
 
-    <!-- ═══════════════════ HERO ═══════════════════ -->
-    <section class="hero" id="home">
-      <div class="hero-bg-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting animate-fade-up">Hello, I'm</p>
+        <h1 class="hero-name animate-fade-up delay-1">
+          Monish <span class="gradient-text">Shrestha</span>
+        </h1>
+        <div class="hero-typed-wrapper animate-fade-up delay-2">
+          <span class="typed-prefix">I'm a </span>
+          <span id="typed-element"></span>
+        </div>
+        <p class="hero-description animate-fade-up delay-3">
+          A passionate beginner web developer & graphic designer crafting
+          modern digital experiences. Currently diving deep into the MERN
+          stack to build full-stack applications.
+        </p>
+
+        <div class="hero-buttons animate-fade-up delay-4">
+          <a href="#contact" class="btn btn-primary">
+            <span>Let's Talk</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="Monish_Shrestha_Resume_Final.pdf" class="btn btn-outline" id="resumeBtn" target="_blank">
+            <span>Resume</span>
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+
+        <div class="hero-socials animate-fade-up delay-5">
+          <a href="https://github.com/ItsGhost01" target="_blank" aria-label="GitHub" id="social-github">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/monish-shrestha-a4414b229/" target="_blank" aria-label="LinkedIn"
+            id="social-linkedin">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:Shrestha.sumit1371@gmail.com" aria-label="Email" id="social-email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
       </div>
 
-      <div class="hero-content">
-        <div class="hero-text">
-          <p class="hero-greeting animate-fade-up">Hello, I'm</p>
-          <h1 class="hero-name animate-fade-up delay-1">
-            Monish <span class="gradient-text">Shrestha</span>
-          </h1>
-          <div class="hero-typed-wrapper animate-fade-up delay-2">
-            <span class="typed-prefix">I'm a </span>
-            <span id="typed-element"></span>
+      <div class="hero-image animate-fade-up delay-2">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-glow"></div>
+          <div class="hero-image-border">
+            <img src="images/Me.png" alt="Monish Shrestha" />
           </div>
-          <p class="hero-description animate-fade-up delay-3">
-            A passionate beginner web developer & graphic designer crafting
-            modern digital experiences. Currently diving deep into the MERN
-            stack to build full-stack applications.
+          <div class="hero-image-dots"></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Hey there! I'm <strong>Monish Shrestha</strong>, a self-taught developer
+            who fell in love with building things for the web. My journey started
+            with curiosity about how websites work, and now I'm deep into learning
+            the MERN stack (MongoDB, Express, React, Node.js).
+          </p>
+          <p>
+            Beyond code, I have a strong eye for design. I use tools like
+            <strong>Figma</strong>, <strong>Canva</strong>, and <strong>Photoshop</strong>
+            to create stunning visuals and user interfaces. I believe great
+            development starts with great design.
+          </p>
+          <p>
+            I'm always eager to learn new technologies and collaborate on
+            exciting projects. Let's build something amazing together!
           </p>
 
-          <div class="hero-buttons animate-fade-up delay-4">
-            <a href="#contact" class="btn btn-primary">
-              <span>Let's Talk</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="#" class="btn btn-outline" id="resumeBtn">
-              <span>Resume</span>
-              <i class="fa-solid fa-download"></i>
-            </a>
-          </div>
-
-          <div class="hero-socials animate-fade-up delay-5">
-            <a href="https://github.com/ItsGhost01" target="_blank" aria-label="GitHub" id="social-github">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/monish-shrestha-a4414b229/" target="_blank" aria-label="LinkedIn"
-              id="social-linkedin">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="mailto:Shrestha.sumit1371@gmail.com" aria-label="Email" id="social-email">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-image animate-fade-up delay-2">
-          <div class="hero-image-wrapper">
-            <div class="hero-image-glow"></div>
-            <div class="hero-image-border">
-              <img src="images/Me.png" alt="Monish Shrestha" />
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects</span>
             </div>
-            <div class="hero-image-dots"></div>
-          </div>
-        </div>
-      </div>
-
-      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-        <div class="mouse">
-          <div class="wheel"></div>
-        </div>
-        <span>Scroll Down</span>
-      </a>
-    </section>
-
-    <!-- ═══════════════════ ABOUT ═══════════════════ -->
-    <section class="section about-section" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Get to know me</span>
-          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              Hey there! I'm <strong>Monish Shrestha</strong>, a self-taught developer
-              who fell in love with building things for the web. My journey started
-              with curiosity about how websites work, and now I'm deep into learning
-              the MERN stack (MongoDB, Express, React, Node.js).
-            </p>
-            <p>
-              Beyond code, I have a strong eye for design. I use tools like
-              <strong>Figma</strong>, <strong>Canva</strong>, and <strong>Photoshop</strong>
-              to create stunning visuals and user interfaces. I believe great
-              development starts with great design.
-            </p>
-            <p>
-              I'm always eager to learn new technologies and collaborate on
-              exciting projects. Let's build something amazing together!
-            </p>
-
-            <div class="about-stats">
-              <div class="stat-item">
-                <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
-                <span class="stat-label">Projects</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
-                <span class="stat-label">Design Tools</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
-                <span class="stat-label">Technologies</span>
-              </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Design Tools</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Technologies</span>
             </div>
           </div>
+        </div>
 
-          <div class="about-cards">
-            <div class="about-card">
-              <div class="about-card-icon">
-                <i class="fa-solid fa-code"></i>
-              </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div>
               <h3>Web Development</h3>
               <p>Building responsive websites with clean, modern code</p>
             </div>
-            <div class="about-card">
-              <div class="about-card-icon">
-                <i class="fa-solid fa-palette"></i>
-              </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div>
               <h3>UI/UX Design</h3>
               <p>Creating beautiful, intuitive user interfaces</p>
             </div>
-            <div class="about-card">
-              <div class="about-card-icon">
-                <i class="fa-solid fa-graduation-cap"></i>
-              </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
               <h3>Always Learning</h3>
               <p>Currently mastering React & the MERN stack</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══════════════════ SKILLS ═══════════════════ -->
-    <section class="section skills-section" id="skills">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">What I know</span>
-          <h2 class="section-title">Skills & <span class="gradient-text">Tools</span></h2>
-        </div>
+  <!-- ═══════════════════ SKILLS ═══════════════════ -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I know</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Tools</span></h2>
+      </div>
 
-        <div class="skills-grid">
-          <!-- Development Skills -->
-          <div class="skills-category">
-            <h3 class="skills-category-title">
-              <i class="fa-solid fa-laptop-code"></i>
-              Development
-            </h3>
-            <div class="skills-list">
-              <div class="skill-item">
-                <div class="skill-icon" style="--skill-color: #e34f26">
-                  <i class="fa-brands fa-html5"></i>
-                </div>
-                <div class="skill-info">
-                  <span class="skill-name">HTML5</span>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="85" style="--bar-color: #e34f26"></div>
-                  </div>
+      <div class="skills-grid">
+        <!-- Development Skills -->
+        <div class="skills-category">
+          <h3 class="skills-category-title">
+            <i class="fa-solid fa-laptop-code"></i>
+            Development
+          </h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-icon" style="--skill-color: #e34f26">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">HTML5</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85" style="--bar-color: #e34f26"></div>
                 </div>
               </div>
+            </div>
 
-              <div class="skill-item">
-                <div class="skill-icon" style="--skill-color: #1572b6">
-                  <i class="fa-brands fa-css3-alt"></i>
-                </div>
-                <div class="skill-info">
-                  <span class="skill-name">CSS3</span>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="80" style="--bar-color: #1572b6"></div>
-                  </div>
+            <div class="skill-item">
+              <div class="skill-icon" style="--skill-color: #1572b6">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">CSS3</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80" style="--bar-color: #1572b6"></div>
                 </div>
               </div>
+            </div>
 
-              <div class="skill-item">
-                <div class="skill-icon" style="--skill-color: #f7df1e">
-                  <i class="fa-brands fa-js"></i>
-                </div>
-                <div class="skill-info">
-                  <span class="skill-name">JavaScript</span>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="65" style="--bar-color: #f7df1e"></div>
-                  </div>
+            <div class="skill-item">
+              <div class="skill-icon" style="--skill-color: #f7df1e">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="65" style="--bar-color: #f7df1e"></div>
                 </div>
               </div>
+            </div>
 
-              <div class="skill-item">
-                <div class="skill-icon" style="--skill-color: #61dafb">
-                  <i class="fa-brands fa-react"></i>
+            <div class="skill-item">
+              <div class="skill-icon" style="--skill-color: #61dafb">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <div class="skill-info">
+                <div class="skill-name-row">
+                  <span class="skill-name">React</span>
+                  <span class="skill-badge">Learning</span>
                 </div>
-                <div class="skill-info">
-                  <div class="skill-name-row">
-                    <span class="skill-name">React</span>
-                    <span class="skill-badge">Learning</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="30" style="--bar-color: #61dafb"></div>
-                  </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="30" style="--bar-color: #61dafb"></div>
                 </div>
               </div>
+            </div>
 
-              <div class="skill-item">
-                <div class="skill-icon" style="--skill-color: #68a063">
-                  <i class="fa-brands fa-node-js"></i>
+            <div class="skill-item">
+              <div class="skill-icon" style="--skill-color: #68a063">
+                <i class="fa-brands fa-node-js"></i>
+              </div>
+              <div class="skill-info">
+                <div class="skill-name-row">
+                  <span class="skill-name">MERN Stack</span>
+                  <span class="skill-badge">Learning</span>
                 </div>
-                <div class="skill-info">
-                  <div class="skill-name-row">
-                    <span class="skill-name">MERN Stack</span>
-                    <span class="skill-badge">Learning</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="25" style="--bar-color: #68a063"></div>
-                  </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="25" style="--bar-color: #68a063"></div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Design Tools -->
-          <div class="skills-category">
-            <h3 class="skills-category-title">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-              Design Tools
-            </h3>
-            <div class="tools-grid">
-              <div class="tool-card">
-                <div class="tool-icon">
-                  <i class="fa-brands fa-figma"></i>
-                </div>
-                <span class="tool-name">Figma</span>
+        <!-- Design Tools -->
+        <div class="skills-category">
+          <h3 class="skills-category-title">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Design Tools
+          </h3>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="tool-icon">
+                <i class="fa-brands fa-figma"></i>
               </div>
+              <span class="tool-name">Figma</span>
+            </div>
 
-              <div class="tool-card">
-                <div class="tool-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                    <path d="M2 2h20v20H2V2zm2 2v16h16V4H4zm3.5 7.5l3-4.5 2.5 3.75L15.5 8l4 8H5l2.5-4.5z" />
-                  </svg>
-                </div>
-                <span class="tool-name">Canva</span>
+            <div class="tool-card">
+              <div class="tool-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M2 2h20v20H2V2zm2 2v16h16V4H4zm3.5 7.5l3-4.5 2.5 3.75L15.5 8l4 8H5l2.5-4.5z" />
+                </svg>
               </div>
+              <span class="tool-name">Canva</span>
+            </div>
 
-              <div class="tool-card">
-                <div class="tool-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                    <path
-                      d="M9.85 8.85c.28.28.28.73 0 1.01L7.01 12.7l2.84 2.84c.28.28.28.73 0 1.01-.28.28-.73.28-1.01 0L5.29 13.01c-.28-.28-.28-.73 0-1.01l3.55-3.55c.28-.14.73-.14 1.01.4zM19.71 11.29l-3.55-3.55c-.28-.28-.73-.28-1.01 0-.28.28-.28.73 0 1.01l2.84 2.84-2.84 2.84c-.28.28-.28.73 0 1.01.14.14.33.21.51.21s.37-.07.51-.21l3.55-3.55c.27-.27.27-.73-.01-1.01z" />
-                  </svg>
-                </div>
-                <span class="tool-name">Photoshop</span>
+            <div class="tool-card">
+              <div class="tool-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path
+                    d="M9.85 8.85c.28.28.28.73 0 1.01L7.01 12.7l2.84 2.84c.28.28.28.73 0 1.01-.28.28-.73.28-1.01 0L5.29 13.01c-.28-.28-.28-.73 0-1.01l3.55-3.55c.28-.14.73-.14 1.01.4zM19.71 11.29l-3.55-3.55c-.28-.28-.73-.28-1.01 0-.28.28-.28.73 0 1.01l2.84 2.84-2.84 2.84c-.28.28-.28.73 0 1.01.14.14.33.21.51.21s.37-.07.51-.21l3.55-3.55c.27-.27.27-.73-.01-1.01z" />
+                </svg>
               </div>
+              <span class="tool-name">Photoshop</span>
+            </div>
 
-              <div class="tool-card">
-                <div class="tool-icon">
-                  <i class="fa-solid fa-robot"></i>
-                </div>
-                <span class="tool-name">AI Tools</span>
+            <div class="tool-card">
+              <div class="tool-icon">
+                <i class="fa-solid fa-robot"></i>
               </div>
+              <span class="tool-name">AI Tools</span>
+            </div>
 
-              <div class="tool-card">
-                <div class="tool-icon">
-                  <i class="fa-brands fa-github"></i>
-                </div>
-                <span class="tool-name">GitHub</span>
+            <div class="tool-card">
+              <div class="tool-icon">
+                <i class="fa-brands fa-github"></i>
               </div>
+              <span class="tool-name">GitHub</span>
+            </div>
 
-              <div class="tool-card">
-                <div class="tool-icon">
-                  <i class="fa-solid fa-terminal"></i>
-                </div>
-                <span class="tool-name">VS Code</span>
+            <div class="tool-card">
+              <div class="tool-icon">
+                <i class="fa-solid fa-terminal"></i>
               </div>
+              <span class="tool-name">VS Code</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══════════════════ DESIGNS ═══════════════════ -->
-    <section class="section designs-section" id="designs">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">My creative work</span>
-          <h2 class="section-title">Design <span class="gradient-text">Showcase</span></h2>
-          <p class="section-subtitle">
-            A collection of UI/UX designs crafted with Figma, Canva & Photoshop
-          </p>
-        </div>
-
-        <div class="designs-grid">
-          <div class="design-card" id="design-1">
-            <div class="design-image">
-              <img src="images/design-food-app.png" alt="Food Delivery App Design" loading="lazy" />
-              <div class="design-overlay">
-                <div class="design-overlay-content">
-                  <h4>Food Delivery App</h4>
-                  <p>Mobile UI Design</p>
-                  <div class="design-tools-used">
-                    <span>Figma</span>
-                    <span>Photoshop</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="design-card" id="design-2">
-            <div class="design-image">
-              <img src="images/design-dashboard.png" alt="Dashboard Design" loading="lazy" />
-              <div class="design-overlay">
-                <div class="design-overlay-content">
-                  <h4>Analytics Dashboard</h4>
-                  <p>Web UI Design</p>
-                  <div class="design-tools-used">
-                    <span>Figma</span>
-                    <span>AI Tools</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="design-card" id="design-3">
-            <div class="design-image">
-              <img src="images/design-ecommerce.png" alt="E-commerce Design" loading="lazy" />
-              <div class="design-overlay">
-                <div class="design-overlay-content">
-                  <h4>E-Commerce Landing</h4>
-                  <p>Web UI Design</p>
-                  <div class="design-tools-used">
-                    <span>Canva</span>
-                    <span>Figma</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="design-card" id="design-4">
-            <div class="design-image">
-              <img src="images/design-fitness-app.png" alt="Fitness App Design" loading="lazy" />
-              <div class="design-overlay">
-                <div class="design-overlay-content">
-                  <h4>Fitness Tracker App</h4>
-                  <p>Mobile UI Design</p>
-                  <div class="design-tools-used">
-                    <span>Figma</span>
-                    <span>Photoshop</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">
+          A selection of web development projects I've worked on
+        </p>
       </div>
-    </section>
 
-    <!-- ═══════════════════ CONTACT ═══════════════════ -->
-    <section class="section contact-section" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Get in touch</span>
-          <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Let's work together</h3>
-            <p>
-              I'm always excited to collaborate on new projects and learn from
-              experienced developers. Feel free to reach out!
-            </p>
-
-            <div class="contact-details">
-              <div class="contact-item" id="contact-email">
-                <div class="contact-item-icon">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div>
-                  <span class="contact-item-label">Email</span>
-                  <a href="mailto:Shrestha.sumit1371@gmail.com">Shrestha.sumit1371@gmail.com</a>
-                </div>
-              </div>
-
-              <div class="contact-item" id="contact-location">
-                <div class="contact-item-icon">
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div>
-                  <span class="contact-item-label">Location</span>
-                  <span>Nepal</span>
-                </div>
-              </div>
-
-              <div class="contact-item" id="contact-status">
-                <div class="contact-item-icon">
-                  <i class="fa-solid fa-circle-check"></i>
-                </div>
-                <div>
-                  <span class="contact-item-label">Status</span>
-                  <span>Open to opportunities</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-socials">
-              <a href="https://github.com/ItsGhost01" target="_blank" aria-label="GitHub">
+      <div class="projects-grid">
+        <!-- Project 1 - PawPal -->
+        <div class="project-card" id="project-1">
+          <div class="project-image">
+            <img src="images/pawpal.jpg" alt="PawPal App" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://github.com/ItsGhost01" target="_blank" class="project-link" aria-label="View on GitHub">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://www.linkedin.com/in/monish-shrestha-a4414b229/" target="_blank" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>PawPal</h3>
+            <p>A pet care companion app designed to help pet owners manage their pet's health, meals, and activities.</p>
+            <div class="project-tech">
+              <span>Figma</span>
+              <span>UI/UX</span>
+              <span>Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 - Capstone Project -->
+        <div class="project-card" id="project-2">
+          <div class="project-image">
+            <img src="images/Capstone Project.jpg" alt="Capstone Project" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://github.com/ItsGhost01" target="_blank" class="project-link" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
               </a>
-              <a href="mailto:Shrestha.sumit1371@gmail.com" aria-label="Email">
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Capstone Project</h3>
+            <p>Full-stack web application built as a capstone project, showcasing my development and problem-solving skills.</p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 - Book App -->
+        <div class="project-card" id="project-3">
+          <div class="project-image">
+            <img src="images/Book.jpg" alt="Book App" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://github.com/ItsGhost01" target="_blank" class="project-link" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Book App</h3>
+            <p>A reading companion application for managing and discovering books with a clean, intuitive interface.</p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 - App LoadScreen -->
+        <div class="project-card" id="project-4">
+          <div class="project-image">
+            <img src="images/App LoadScreen@2x.jpg" alt="App Load Screen" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://github.com/ItsGhost01" target="_blank" class="project-link" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>App Load Screen</h3>
+            <p>A beautifully animated app loading screen design concept with smooth transitions and engaging visuals.</p>
+            <div class="project-tech">
+              <span>Figma</span>
+              <span>UI Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ DESIGNS ═══════════════════ -->
+  <section class="section designs-section" id="designs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My creative work</span>
+        <h2 class="section-title">Design <span class="gradient-text">Showcase</span></h2>
+        <p class="section-subtitle">
+          A collection of graphic designs crafted with Figma, Canva & Photoshop
+        </p>
+      </div>
+
+      <div class="designs-grid">
+        <div class="design-card" id="design-1">
+          <div class="design-image">
+            <img src="Designs/College post Design.jpg" alt="College Post Design" loading="lazy" />
+            <div class="design-overlay">
+              <div class="design-overlay-content">
+                <h4>College Post Design</h4>
+                <p>Social Media Design</p>
+                <div class="design-tools-used">
+                  <span>Canva</span>
+                  <span>Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-card" id="design-2">
+          <div class="design-image">
+            <img src="Designs/KALA GHAR.png" alt="Kala Ghar Design" loading="lazy" />
+            <div class="design-overlay">
+              <div class="design-overlay-content">
+                <h4>Kala Ghar</h4>
+                <p>Brand Identity Design</p>
+                <div class="design-tools-used">
+                  <span>Figma</span>
+                  <span>Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-card" id="design-3">
+          <div class="design-image">
+            <img src="Designs/Main logo.png" alt="Main Logo Design" loading="lazy" />
+            <div class="design-overlay">
+              <div class="design-overlay-content">
+                <h4>Logo Design</h4>
+                <p>Brand Identity</p>
+                <div class="design-tools-used">
+                  <span>Figma</span>
+                  <span>AI Tools</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-card" id="design-4">
+          <div class="design-image">
+            <img src="Designs/Neon Logo Design.png" alt="Neon Logo Design" loading="lazy" />
+            <div class="design-overlay">
+              <div class="design-overlay-content">
+                <h4>Neon Logo Design</h4>
+                <p>Logo Design</p>
+                <div class="design-tools-used">
+                  <span>Photoshop</span>
+                  <span>AI Tools</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-card" id="design-5">
+          <div class="design-image">
+            <img src="Designs/Tropicana Design.png" alt="Tropicana Design" loading="lazy" />
+            <div class="design-overlay">
+              <div class="design-overlay-content">
+                <h4>Tropicana Design</h4>
+                <p>Product Design</p>
+                <div class="design-tools-used">
+                  <span>Canva</span>
+                  <span>Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-card" id="design-6">
+          <div class="design-image">
+            <img src="Designs/RSP.jpg" alt="RSP Design" loading="lazy" />
+            <div class="design-overlay">
+              <div class="design-overlay-content">
+                <h4>RSP Design</h4>
+                <p>Graphic Design</p>
+                <div class="design-tools-used">
+                  <span>Figma</span>
+                  <span>Canva</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-card" id="design-7">
+          <div class="design-image">
+            <img src="Designs/Task 7 Pamphlet.jpg" alt="Pamphlet Design" loading="lazy" />
+            <div class="design-overlay">
+              <div class="design-overlay-content">
+                <h4>Pamphlet Design</h4>
+                <p>Print Design</p>
+                <div class="design-tools-used">
+                  <span>Canva</span>
+                  <span>Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-card" id="design-8">
+          <div class="design-image">
+            <img src="Designs/Pawpal logo v2@3x.png" alt="PawPal Logo" loading="lazy" />
+            <div class="design-overlay">
+              <div class="design-overlay-content">
+                <h4>PawPal Logo</h4>
+                <p>App Logo Design</p>
+                <div class="design-tools-used">
+                  <span>Figma</span>
+                  <span>AI Tools</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CERTIFICATIONS ═══════════════════ -->
+  <section class="section certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My achievements</span>
+        <h2 class="section-title">Certifi<span class="gradient-text">cations</span></h2>
+        <p class="section-subtitle">
+          Courses and certifications I've earned along the way
+        </p>
+      </div>
+
+      <div class="certifications-grid">
+        <div class="cert-card" id="cert-1">
+          <div class="cert-image">
+            <img src="Certificates/AWS.jpg" alt="AWS Certification" loading="lazy" />
+          </div>
+          <div class="cert-info">
+            <div class="cert-badge">
+              <i class="fa-brands fa-aws"></i>
+            </div>
+            <h3>AWS Cloud Practitioner</h3>
+            <p>Amazon Web Services</p>
+          </div>
+        </div>
+
+        <div class="cert-card" id="cert-2">
+          <div class="cert-image">
+            <img src="Certificates/Udemy.jpg" alt="Udemy Certification" loading="lazy" />
+          </div>
+          <div class="cert-info">
+            <div class="cert-badge">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Udemy</p>
+          </div>
+        </div>
+
+        <div class="cert-card" id="cert-3">
+          <div class="cert-image">
+            <img src="Certificates/Graphic design.jpeg" alt="Graphic Design Certification" loading="lazy" />
+          </div>
+          <div class="cert-info">
+            <div class="cert-badge">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <h3>Graphic Design</h3>
+            <p>Professional Certificate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's work together</h3>
+          <p>
+            I'm always excited to collaborate on new projects and learn from
+            experienced developers. Feel free to reach out!
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item" id="contact-email">
+              <div class="contact-item-icon">
                 <i class="fa-solid fa-envelope"></i>
-              </a>
+              </div>
+              <div>
+                <span class="contact-item-label">Email</span>
+                <a href="mailto:Shrestha.sumit1371@gmail.com">Shrestha.sumit1371@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item" id="contact-location">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="contact-item-label">Location</span>
+                <span>Nepal</span>
+              </div>
+            </div>
+
+            <div class="contact-item" id="contact-status">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div>
+                <span class="contact-item-label">Status</span>
+                <span>Open to opportunities</span>
+              </div>
             </div>
           </div>
 
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <input type="text" id="form-name" placeholder="Your Name" required />
-              <label for="form-name">Your Name</label>
-            </div>
-            <div class="form-group">
-              <input type="email" id="form-email" placeholder="Your Email" required />
-              <label for="form-email">Your Email</label>
-            </div>
-            <div class="form-group">
-              <textarea id="form-message" placeholder="Your Message" rows="5" required></textarea>
-              <label for="form-message">Your Message</label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" id="form-submit">
-              <span>Send Message</span>
-              <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ FOOTER ═══════════════════ -->
-    <footer class="footer" id="footer">
-      <div class="container">
-        <div class="footer-content">
-          <a href="#home" class="footer-logo">M<span>onish</span></a>
-          <p>&copy; 2026 Monish Shrestha. Built with passion & code.</p>
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#designs">Designs</a>
-            <a href="#contact">Contact</a>
+          <div class="contact-socials">
+            <a href="https://github.com/ItsGhost01" target="_blank" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/monish-shrestha-a4414b229/" target="_blank" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:Shrestha.sumit1371@gmail.com" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
           </div>
         </div>
-      </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="form-name" placeholder="Your Name" required />
+            <label for="form-name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="form-email" placeholder="Your Email" required />
+            <label for="form-email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="form-message" placeholder="Your Message" rows="5" required></textarea>
+            <label for="form-message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#home" class="footer-logo">M<span>onish</span></a>
+        <p>&copy; 2026 Monish Shrestha. Built with passion & code.</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#designs">Designs</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
