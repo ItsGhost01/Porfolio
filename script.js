@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Web Developer",
       "Graphic Designer",
       "UI/UX Designer",
-      "MERN Stack Learner",
+      "PERN Stack Learner",
     ],
     typeSpeed: 50,
     backSpeed: 30,
