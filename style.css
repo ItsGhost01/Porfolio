@@ -41,6 +41,34 @@
   --nav-height: 80px;
 }
 
+/* ─── LIGHT MODE TOKENS ─── */
+body.light {
+  --bg-primary: #f5f5fa;
+  --bg-secondary: #eceef7;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f0fa;
+
+  --text-primary: #0d0d18;
+  --text-secondary: #4a4a68;
+  --text-muted: #8888a8;
+
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-glow: rgba(108, 92, 231, 0.25);
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 40px rgba(108, 92, 231, 0.2);
+}
+
+/* Smooth transition for ALL elements when theme switches */
+body,
+body * {
+  transition-property: background, background-color, border-color, color, box-shadow;
+  transition-duration: 0.35s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* ─── RESET & BASE ─── */
 *,
 *::before,
@@ -212,6 +240,10 @@ nav.scrolled {
   height: 68px;
 }
 
+body.light nav.scrolled {
+  background: rgba(245, 245, 250, 0.92);
+}
+
 .nav-logo {
   font-family: "Outfit", sans-serif;
   font-size: 1.6rem;
@@ -292,6 +324,78 @@ nav.scrolled {
 }
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ─── THEME TOGGLE ─── */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  flex-shrink: 0;
+}
+
+.theme-toggle-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 58px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid var(--border-glow);
+  border-radius: var(--radius-full);
+  padding: 0 6px;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.35s ease, border-color 0.35s ease;
+}
+
+.theme-toggle-track:hover {
+  border-color: var(--accent-end);
+  background: rgba(168, 85, 247, 0.1);
+}
+
+.theme-icon-light,
+.theme-icon-dark {
+  font-size: 0.7rem;
+  z-index: 1;
+  transition: color 0.35s ease, transform 0.35s ease;
+  position: relative;
+}
+
+/* Dark mode: moon active (right), sun dimmed (left) */
+.theme-icon-light { color: var(--text-muted); }
+.theme-icon-dark  { color: var(--accent-end); transform: scale(1.15); }
+
+/* Light mode: sun active (left), moon dimmed (right) */
+body.light .theme-icon-light { color: #f59e0b; transform: scale(1.15); }
+body.light .theme-icon-dark  { color: var(--text-muted); transform: scale(1); }
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--gradient);
+  box-shadow: 0 2px 8px var(--accent-glow);
+  transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Dark mode: thumb on right (moon side) */
+  left: calc(100% - 26px);
+}
+
+/* Light mode: thumb slides to left (sun side) */
+body.light .theme-toggle-thumb {
+  left: 4px;
+}
+
+/* Light mode — fix mobile menu background */
+body.light .nav-links {
+  background: rgba(236, 238, 247, 0.98);
 }
 
 /* ═══════════════════ HERO ═══════════════════ */
@@ -937,6 +1041,62 @@ nav.scrolled {
   border: 1px solid rgba(168, 85, 247, 0.15);
 }
 
+/* Full-Stack project featured border */
+.project-featured {
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+.project-featured:hover {
+  border-color: var(--accent-end);
+  box-shadow: 0 20px 60px rgba(168, 85, 247, 0.2);
+}
+
+/* Full-Stack badge */
+.project-badge-fs {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--gradient);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  z-index: 2;
+  box-shadow: 0 2px 12px var(--accent-glow);
+}
+
+/* Live Demo button inside project info */
+.project-live-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 9px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  background: var(--gradient);
+  color: #fff;
+  transition: var(--transition);
+  box-shadow: 0 3px 14px var(--accent-glow);
+  text-decoration: none;
+}
+
+.project-live-btn i {
+  font-size: 0.55rem;
+  color: #7fffb2;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.project-live-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--accent-glow);
+}
+
 /* ═══════════════════ DESIGNS ═══════════════════ */
 .designs-section {
   background: var(--bg-primary);
@@ -1023,7 +1183,7 @@ nav.scrolled {
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
 }
 
@@ -1091,6 +1251,170 @@ nav.scrolled {
 .cert-info p {
   font-size: 0.85rem;
   color: var(--text-secondary);
+}
+
+/* ─── Clickable cert cards ─── */
+.cert-clickable {
+  cursor: pointer;
+}
+
+.cert-view-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(108, 92, 231, 0.6);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0;
+}
+
+.cert-clickable:hover .cert-view-hint {
+  opacity: 1;
+}
+
+/* ─── Lightbox ─── */
+@keyframes lbFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes lbSlideUp {
+  from { opacity: 0; transform: translateY(30px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.cert-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cert-lightbox.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.cert-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.cert-lightbox-content {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  max-width: 860px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 60px var(--accent-glow);
+  transform: translateY(30px) scale(0.96);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease;
+  opacity: 0;
+}
+
+.cert-lightbox.open .cert-lightbox-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.cert-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(168,85,247,0.15);
+  border: 1px solid var(--border-glow);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.cert-lightbox-close:hover {
+  background: var(--gradient);
+  color: #fff;
+  border-color: transparent;
+  transform: rotate(90deg);
+}
+
+.cert-lightbox-title {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-right: 48px;
+}
+
+.cert-lightbox-img-wrap {
+  overflow-y: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  max-height: calc(90vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-lightbox-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.cert-lightbox-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-end;
+  padding: 9px 22px;
+  border-radius: var(--radius-full);
+  background: var(--gradient);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.cert-lightbox-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 /* ═══════════════════ CONTACT ═══════════════════ */

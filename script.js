@@ -19,6 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ─── THEME TOGGLE ───
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+// Apply saved preference on load (default = dark)
+const savedTheme = localStorage.getItem("portfolio-theme");
+if (savedTheme === "light") {
+  body.classList.add("light");
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light");
+    const isLight = body.classList.contains("light");
+    localStorage.setItem("portfolio-theme", isLight ? "light" : "dark");
+  });
+}
+
 // ─── NAVBAR SCROLL EFFECT ───
 const navbar = document.getElementById("navbar");
 
@@ -185,4 +203,51 @@ window.addEventListener("mousemove", (e) => {
     const speed = (i + 1) * 10;
     shape.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
   });
+});
+
+// ─── CERTIFICATE LIGHTBOX ───
+const certLightbox   = document.getElementById("certLightbox");
+const certLbImg      = document.getElementById("certLightboxImg");
+const certLbTitle    = document.getElementById("certLightboxTitle");
+const certLbClose    = document.getElementById("certLightboxClose");
+const certLbBackdrop = document.getElementById("certLightboxBackdrop");
+const certLbDownload = document.getElementById("certLightboxDownload");
+
+function openCertLightbox(imgSrc, title) {
+  certLbImg.src = imgSrc;
+  certLbImg.alt = title;
+  certLbTitle.textContent = title;
+  certLbDownload.href = imgSrc;
+  certLbDownload.setAttribute("download", title);
+  certLightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeCertLightbox() {
+  certLightbox.classList.remove("open");
+  document.body.style.overflow = "";
+  // Clear src after transition so image doesn't flash
+  setTimeout(() => { certLbImg.src = ""; }, 350);
+}
+
+// Click on any cert card
+document.querySelectorAll(".cert-clickable").forEach((card) => {
+  card.addEventListener("click", () => {
+    const img   = card.getAttribute("data-cert-img");
+    const title = card.getAttribute("data-cert-title");
+    openCertLightbox(img, title);
+  });
+});
+
+// Close button
+certLbClose && certLbClose.addEventListener("click", closeCertLightbox);
+
+// Click backdrop
+certLbBackdrop && certLbBackdrop.addEventListener("click", closeCertLightbox);
+
+// Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && certLightbox.classList.contains("open")) {
+    closeCertLightbox();
+  }
 });

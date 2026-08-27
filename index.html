@@ -29,6 +29,14 @@
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
 
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+      <span class="theme-toggle-track">
+        <i class="fa-solid fa-sun theme-icon-light"></i>
+        <i class="fa-solid fa-moon theme-icon-dark"></i>
+        <span class="theme-toggle-thumb"></span>
+      </span>
+    </button>
+
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span>
       <span></span>
@@ -133,7 +141,7 @@
 
           <div class="about-stats">
             <div class="stat-item">
-              <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-number" data-target="7">0</span><span class="stat-plus">+</span>
               <span class="stat-label">Projects</span>
             </div>
             <div class="stat-item">
@@ -498,26 +506,67 @@
           </div>
         </div>
 
-        <!-- Project 4 - Student Management System -->
-        <div class="project-card" id="project-sms">
+        <!-- Project 4 - Student Management System (Full-Stack) -->
+        <div class="project-card project-featured" id="project-sms">
           <div class="project-image">
-            <img src="Projects/Student Mangement System/Signin.jpg" alt="Student Management System" loading="lazy" />
+            <img src="Projects/Student Mangement Coded/STUDENT HUB.jpg" alt="Student Management System" loading="lazy" />
+            <div class="project-badge-fs">Full-Stack</div>
             <div class="project-overlay">
-              <a href="https://www.figma.com/design/DlJFwI9dwJMip2XP12cRQH/Student-Management-System-Design-main?node-id=0-1&t=H9OE2YOaWoUkqeQl-1"
-                target="_blank" class="project-link" aria-label="View on Figma">
-                <i class="fa-brands fa-figma"></i>
+              <a href="https://studentthub.netlify.app/" target="_blank" class="project-link" aria-label="Live Demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://github.com/ItsGhost01" target="_blank" class="project-link" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </div>
           <div class="project-info">
             <h3>Student Management System</h3>
-            <p>A comprehensive dashboard for managing students, teachers, and staff with automated report generation.
-            </p>
+            <p>Full-stack system with secure authentication, role-based access control, RESTful APIs, complete CRUD for students &amp; courses, Cloudinary image uploads, search, filtering, sorting, and toast notifications. Deployed on Netlify + Render with Neon (PostgreSQL).</p>
             <div class="project-tech">
-              <span>Figma</span>
-              <span>UI Design</span>
-              <span>System Design</span>
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Express.js</span>
+              <span>PostgreSQL</span>
+              <span>Sequelize ORM</span>
+              <span>Cloudinary</span>
+              <span>Tailwind CSS</span>
+              <span>Material UI</span>
             </div>
+            <a href="https://studentthub.netlify.app/" target="_blank" class="project-live-btn" id="sms-live-link">
+              <i class="fa-solid fa-circle"></i> Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5 - Meddical Hospital Management CMS -->
+        <div class="project-card project-featured" id="project-meddical">
+          <div class="project-image">
+            <img src="Projects/Meddical/Meddical.jpg" alt="Meddical Hospital Management CMS" loading="lazy" />
+            <div class="project-badge-fs">Full-Stack</div>
+            <div class="project-overlay">
+              <a href="https://meddicaal.netlify.app/" target="_blank" class="project-link" aria-label="Live Demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://github.com/ItsGhost01" target="_blank" class="project-link" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Meddical — Hospital Management CMS</h3>
+            <p>Responsive hospital CMS built with Next.js &amp; TypeScript. Features secure authentication via Better Auth with role-based access, admin dashboard for content management, image uploads, and structured data management via Drizzle ORM + PostgreSQL. Deployed on Netlify.</p>
+            <div class="project-tech">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>PostgreSQL</span>
+              <span>Drizzle ORM</span>
+              <span>Better Auth</span>
+              <span>Tailwind CSS</span>
+            </div>
+            <a href="https://meddicaal.netlify.app/" target="_blank" class="project-live-btn" id="meddical-live-link">
+              <i class="fa-solid fa-circle"></i> Live Demo
+            </a>
           </div>
         </div>
       </div>
@@ -605,42 +654,59 @@
       </div>
 
       <div class="certifications-grid">
-        <div class="cert-card" id="cert-1">
+        <div class="cert-card cert-clickable" id="cert-1"
+             data-cert-img="Certificates/AWS.jpg"
+             data-cert-title="AWS Cloud Practitioner">
           <div class="cert-image">
             <img src="Certificates/AWS.jpg" alt="AWS Certification" loading="lazy" />
+            <div class="cert-view-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> View</div>
           </div>
           <div class="cert-info">
-            <div class="cert-badge">
-              <i class="fa-brands fa-aws"></i>
-            </div>
+            <div class="cert-badge"><i class="fa-brands fa-aws"></i></div>
             <h3>AWS Cloud Practitioner</h3>
             <p>Amazon Web Services</p>
           </div>
         </div>
 
-        <div class="cert-card" id="cert-2">
+        <div class="cert-card cert-clickable" id="cert-2"
+             data-cert-img="Certificates/Udemy.jpg"
+             data-cert-title="Web Development">
           <div class="cert-image">
             <img src="Certificates/Udemy.jpg" alt="Udemy Certification" loading="lazy" />
+            <div class="cert-view-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> View</div>
           </div>
           <div class="cert-info">
-            <div class="cert-badge">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
+            <div class="cert-badge"><i class="fa-solid fa-graduation-cap"></i></div>
             <h3>Web Development</h3>
             <p>Udemy</p>
           </div>
         </div>
 
-        <div class="cert-card" id="cert-3">
+        <div class="cert-card cert-clickable" id="cert-3"
+             data-cert-img="Certificates/Graphic design.jpeg"
+             data-cert-title="Graphic Design">
           <div class="cert-image">
             <img src="Certificates/Graphic design.jpeg" alt="Graphic Design Certification" loading="lazy" />
+            <div class="cert-view-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> View</div>
           </div>
           <div class="cert-info">
-            <div class="cert-badge">
-              <i class="fa-solid fa-palette"></i>
-            </div>
+            <div class="cert-badge"><i class="fa-solid fa-palette"></i></div>
             <h3>Graphic Design</h3>
             <p>Professional Certificate</p>
+          </div>
+        </div>
+
+        <div class="cert-card cert-clickable" id="cert-4"
+             data-cert-img="Certificates/MERN Stack.png"
+             data-cert-title="MERN Stack Development">
+          <div class="cert-image">
+            <img src="Certificates/MERN Stack.png" alt="MERN Stack Certification" loading="lazy" />
+            <div class="cert-view-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> View</div>
+          </div>
+          <div class="cert-info">
+            <div class="cert-badge"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>MERN Stack Development</h3>
+            <p>Full-Stack Web Development</p>
           </div>
         </div>
       </div>
@@ -748,6 +814,23 @@
       </div>
     </div>
   </footer>
+
+  <!-- ═══════════════════ CERT LIGHTBOX ═══════════════════ -->
+  <div class="cert-lightbox" id="certLightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+    <div class="cert-lightbox-backdrop" id="certLightboxBackdrop"></div>
+    <div class="cert-lightbox-content">
+      <button class="cert-lightbox-close" id="certLightboxClose" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="cert-lightbox-title" id="certLightboxTitle"></div>
+      <div class="cert-lightbox-img-wrap">
+        <img src="" alt="Certificate" id="certLightboxImg" />
+      </div>
+      <a class="cert-lightbox-download" id="certLightboxDownload" download target="_blank">
+        <i class="fa-solid fa-download"></i> Download
+      </a>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
